@@ -19,7 +19,10 @@ To run the Project<br>
 Project Features:
 1. No need to run the server, it will run programatically.<br>
 2. All the dependencies are included in pom.xml file. No need to download external Jars.<br>
-3.It will create TestNG report once project is run(I am attching screenshot of my TestNG result for reference in Result folder of the project)
+3.It will create TestNG report once project is run<br>
+
+![TestNG Report](https://github.com/ruchikapoor098/TheScoreApp/assets/78932265/d30861f0-00cc-47ff-a060-d5e70ca67368)
+
 
 
 
