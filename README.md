@@ -16,7 +16,7 @@ Appium Automation Pre-requisites(Android):
 3.Install Android studio<br>
 4.Install Appium Server using npm (CLI) command npm install -g appium. <br>
 5.Appium Server version "2.5.1" is used.<br>
-6.Appium Inspectpor used to identify Web Element - https://inspector.appiumpro.com/ <br>
+6.Appium Inspector used to identify Web Element - https://inspector.appiumpro.com/ <br>
 7.Appium Driver used - "uiautomator2@3.0.1" <br>
 8.App .apk file is already present inside the resources folder of project, no need to update the location of apk file
 
