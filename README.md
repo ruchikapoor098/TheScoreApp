@@ -5,7 +5,7 @@ Author-Ruchi Kapoor
 
 Appium Automation Pre-requisites:
 
-1.Install Java jdk-11.0.11 and Eclipse IDE
+1.Install Java jdk-11.0.11 and Eclipse IDE <br>
 2.Install NodeJS
 3.Install Android studio
 4.Install Appium Server using npm (CLI) command npm install -g appium. 
