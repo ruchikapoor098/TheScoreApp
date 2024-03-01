@@ -21,6 +21,7 @@ Project Features:
 2. All the dependencies are included in pom.xml file. No need to download external Jars.<br>
 3.It will create TestNG report once project is run<br>
 
+My TestNG report:<br>
 ![TestNG Report](https://github.com/ruchikapoor098/TheScoreApp/assets/78932265/d30861f0-00cc-47ff-a060-d5e70ca67368)
 
 
