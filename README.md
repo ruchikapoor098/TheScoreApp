@@ -24,7 +24,7 @@ To run the Project<br>
 1.Select the testng xml -> Right click and select Run
 
 Project Features:
-1. No need to run the server, it will run programatically.<br>
+1. No need to run the server, it will run programmatically.<br>
 2. All the dependencies are included in pom.xml file. No need to download external Jars.<br>
 3. It will create TestNG report once project is run<br>
 
