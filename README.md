@@ -3,7 +3,13 @@
 
 Author-Ruchi Kapoor
 
-Appium Automation Pre-requisites:
+Project Overview:
+1. I have created Automation scripts to automate TheScore app using Android Emulator and Appium inspector(to inspect locators for Web Element)<br>
+2. TestNg is being used to generate reports
+3. My automation script will click on the Get Started button on TheScore App and select League(NHL) from the "Choose your League" page, further it will select team and in the end will show the Team stats successfully.<br><br>
+
+
+Appium Automation Pre-requisites(Android):
 
 1.Install Java jdk-11.0.11 and Eclipse IDE <br>
 2.Install NodeJS<br>
@@ -12,6 +18,7 @@ Appium Automation Pre-requisites:
 5.Appium Server version "2.5.1" is used.<br>
 6.Appium Inspectpor used to identify Web Element - https://inspector.appiumpro.com/ <br>
 7.Appium Driver used - "uiautomator2@3.0.1" <br>
+8.App .apk file is already present inside the resources folder of project, no need to update the location of apk file
 
 To run the Project<br>
 1.Select the testng xml -> Right click and select Run
