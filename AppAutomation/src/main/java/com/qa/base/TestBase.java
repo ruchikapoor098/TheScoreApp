@@ -23,7 +23,7 @@ public class TestBase{
 	@Test
 	public void configureAppium() throws MalformedURLException, InterruptedException {
 
-	  //Appium Server will run Automatically
+	   //Appium Server will run Automatically
 	  AppiumDriverLocalService service = new AppiumServiceBuilder().withAppiumJS(new File("C:\\Users\\Rukadar Laptop\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js")).withIPAddress("127.0.0.1").usingPort(4723).build();
 	  service.start();
       
@@ -38,34 +38,34 @@ public class TestBase{
 
 	  //Get Started
 	  driver.findElement(AppiumBy.id("com.fivemobile.thescore:id/action_button_text")).click();
-	  Thread.sleep(3000);
+	
 	  
-         //Verify League Page displayed successfully or not
+       //Verify League Page displayed successfully or not
 	  WebElement leaguePage = driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/title_onboarding\"]"));
 	  Assert.assertTrue(leaguePage.isDisplayed());
-	  Thread.sleep(3000);
+	  
 	  
 	  //Select NHL tab
 	  driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/txt_name\" and @text=\"NHL Hockey\"]")).click();
-	  Thread.sleep(3000);
+	 
           
-          //Click on Continue Button
+      //Click on Continue Button
 	  driver.findElement(AppiumBy.xpath("//android.view.ViewGroup[@resource-id=\"com.fivemobile.thescore:id/btn_primary\"]")).click();
-	  Thread.sleep(3000);
+	  
       
 	  //May Be Later Button click
 	  driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/btn_disallow\"]")).click();
-	  Thread.sleep(3000);
+	  
 	  
 	  
 	  //Got to NHL League tab
 	  driver.findElement(AppiumBy.xpath("(//android.widget.TextView[@text=\"NHL\" and @class=\"android.widget.TextView\"])[2]")).click();
 	  
 	  //Select Toronto Maple Leafs from the list of teams inside NHL League
-	  driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Toronto Maple Leafs\"));"));
-	  Thread.sleep(4000);
+	  driver.findElement(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))" + ".scrollIntoView(new UiSelector()" + ".textMatches(\"" + "Toronto Maple Leafs" + "\").instance(0))"));
 	  driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/txt_name\" and @text=\"Toronto Maple Leafs\"]")).click();
 	  
+	
 	  //CLick on Continue button
 	  driver.findElement(AppiumBy.xpath("//android.widget.TextView[@resource-id=\"com.fivemobile.thescore:id/action_button_text\"]")).click();
 	  
@@ -81,17 +81,23 @@ public class TestBase{
 	  
 	  //Click on Team Stats Tab
 	  driver.findElement(AppiumBy.xpath("//android.widget.TextView[@text=\"TEAM STATS\" and @class=\"android.widget.TextView\"]")).click();
-	  Thread.sleep(5000);
+	 
 	  
 	  //Verify Team Stats displayed successfully or not
 	  WebElement TeamStats = driver.findElement(By.xpath("//android.widget.TextView[@text=\"TEAM STATS\"]"));
 	  Assert.assertTrue(TeamStats.isDisplayed());
-	  Thread.sleep(3000);
 	  
-	   
+	  //Navigate Back to previous page
+	  driver.findElement(AppiumBy.xpath("	//android.widget.ImageButton[@content-desc=\"Navigate up\"]")).click();
+
+	  //verify Favorites Page displays successfully after back navigation
+	  WebElement Favorites = driver.findElement(By.xpath("(//android.widget.ImageView[@resource-id=\"com.fivemobile.thescore:id/navigation_bar_item_icon_view\"])[3]"));
+	  Assert.assertTrue(Favorites.isDisplayed());
+	  Thread.sleep(4000);
+	  
+	  
 	  driver.quit();
 	  service.stop();
-
 	}
 	
 	
